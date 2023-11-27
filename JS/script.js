@@ -15,6 +15,7 @@ Potete scegliere di implementare una soluzione completamente diversa oppure simi
 :saetta: NOTA BENE:
 Seguite le milestone in ordine, non lavorate alla milestone due se prima non avete fatto funzionare la milestone 1!
 Mi raccomando altrimenti sará tutto piú complicato. Procedete in ordine. */
+console.log("ciao");
 
 // - Chiedere i km da percorrere
 
@@ -25,3 +26,25 @@ Mi raccomando altrimenti sará tutto piú complicato. Procedete in ordine. */
 // - Va applicato uno sconto del 20% per i minorenni
 
 // - Va applicato uno sconto del 40% per gli over 65
+
+const generateElement = document.getElementById("generate");
+const ageElement = document.getElementById("age");
+const kmElement = document.getElementById("km");
+
+generateElement.addEventListener("click", function () {
+  console.log("cliccami", ageElement.value, kmElement.value);
+  const age = ageElement.value;
+  const km = kmElement.value;
+
+  let discount = 0;
+  const price = km * 0.21;
+
+  if (age < 18) {
+    discount = (price * 20) / 100;
+  } else if (age > 65) {
+    discount = (price * 40) / 100;
+  }
+  let discounted_price = price - discount;
+
+  console.log(discounted_price);
+});
