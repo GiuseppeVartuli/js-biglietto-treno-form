@@ -35,14 +35,19 @@ generateElement.addEventListener("click", function () {
   console.log("cliccami", ageElement.value, kmElement.value);
   const age = ageElement.value;
   const km = kmElement.value;
+  const minor = minorElement.value;
+  const adult = adultElement.value;
+  const senior = seniorElement.value;
 
   let discount = 0;
   const price = km * 0.21;
 
-  if (age < 18) {
+  if (age === minor) {
     discount = (price * 20) / 100;
-  } else if (age > 65) {
+  } else if (age === senior) {
     discount = (price * 40) / 100;
+  } else {
+    discount = 0;
   }
   let discounted_price = price - discount;
 
