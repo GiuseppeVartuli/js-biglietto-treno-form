@@ -30,26 +30,28 @@ console.log("ciao");
 const generateElement = document.getElementById("generate");
 const ageElement = document.getElementById("age");
 const kmElement = document.getElementById("km");
+const userEL = document.getElementById("user");
+const card_nameEL = document.getElementById("card_name");
+const offer_cardEl = document.getElementById("offer_Card");
 
 generateElement.addEventListener("click", function () {
-  console.log("cliccami", ageElement.value, kmElement.value);
+  console.log(ageElement.value, kmElement.value);
   const age = ageElement.value;
   const km = kmElement.value;
-  const minor = minorElement.value;
-  const adult = adultElement.value;
-  const senior = seniorElement.value;
 
   let discount = 0;
   const price = km * 0.21;
 
-  if (age === minor) {
+  if (age == "minor") {
     discount = (price * 20) / 100;
-  } else if (age === senior) {
+  } else if (age == "senior") {
     discount = (price * 40) / 100;
   } else {
     discount = 0;
   }
+  console.log(discount);
   let discounted_price = price - discount;
 
   console.log(discounted_price);
 });
+card_nameEL.innerHTML = `Il nome del passeggero è: ${user.value}`;

@@ -15,48 +15,69 @@
   <body>
     <div class="container">
       <div class="row">
-        <form>
-          <legend>CALCOLA IL PREZZO DEL TUO BIGLIETTO</legend>
-          <div class="col-3">
-            <div class="mb-3">
-              <label for="disabledTextInput" class="form-label"
-                >Nome Cognome</label
-              >
-              <input
-                type="text"
-                id="name"
-                class="form-control"
-                placeholder="Nome Cognome"
-              />
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="mb-3">
-              <label for="disabledTextInput" class="form-label"
-                >Km da percorrere</label
-              >
-              <input
-                type="number"
-                id="km"
-                class="form-control"
-                placeholder="Inserisci i km da percorrere"
-              />
-            </div>
-          </div>
-
+        <div class="col-2"></div>
+        <legend>CALCOLA IL PREZZO DEL TUO BIGLIETTO</legend>
+        <div class="col-2">
           <div class="mb-3">
-            <label class="my-1 mr-2" for="inlineFormCustomSelectPref"
-              >Fascia d'età</label
+            <label for="disabledTextInput" class="form-label"
+              >Nome Cognome</label
             >
-            <select class="custom-select my-1 mr-sm-2" id="age">
-              <option id="adult" selected>Maggiorenne</option>
-              <option id="minor" value="1">Minorenne</option>
-              <option id="senior" value="2">Over 65</option>
-            </select>
+            <input
+              type="text"
+              id="user"
+              class="form-control"
+              placeholder="Nome Cognome"
+            />
           </div>
-          <button type="submit" class="btn btn-primary">Genera</button>
-          <button type="submit" class="btn btn-primary">Annulla</button>
-        </form>
+        </div>
+        <div class="col-2">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label"
+              >Km da percorrere</label
+            >
+            <input
+              type="number"
+              id="km"
+              class="form-control"
+              placeholder="Inserisci i km da percorrere"
+            />
+          </div>
+        </div>
+        <div class="col-2 mb-3">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref"
+            >Fascia d'età</label
+          >
+          <select class="custom-select my-1 mr-sm-2" id="age">
+            <option value="adult" selected>Maggiorenne</option>
+            <option value="minor">Minorenne</option>
+            <option value="senior">Over 65</option>
+          </select>
+        </div>
+        <div class="col-2">
+          <button id="generate" type="submit" class="btn btn-primary">
+            Genera
+          </button>
+          <button type="reset" class="btn btn-primary">Annulla</button>
+        </div>
+        <div class="col-2">
+          <div class="card" style="width: 18rem">
+            <img
+              src="./img/20200906_Sebino_Express-ridimensionata.jpg"
+              class="card-img-top"
+              alt="treno"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Biglietto</h5>
+              <div id="card_name"></div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li id="offer_card" class="list-group-item">Offerta:</li>
+              <li id="coach_card" class="list-group-item">Carrozza:</li>
+              <li id="cp_code" class="list-group-item">Codice CP:</li>
+              <li id="ticket_card" class="list-group-item">Costo biglietto:</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./JS/script.js"></script>
