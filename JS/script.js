@@ -33,6 +33,7 @@ const kmElement = document.getElementById("km");
 const userEL = document.getElementById("user");
 const card_nameEL = document.getElementById("card_name");
 const offer_cardEl = document.getElementById("offer_Card");
+const ticket_cardEl = document.getElementById("ticket_card");
 
 generateElement.addEventListener("click", function () {
   console.log(ageElement.value, kmElement.value);
@@ -52,6 +53,7 @@ generateElement.addEventListener("click", function () {
   console.log(discount);
   let discounted_price = price - discount;
 
+  ticket_cardEl.innerHTML = discounted_price;
   console.log(discounted_price);
+  card_nameEL.innerHTML = `Il nome del passeggero è: ${user.value}`;
 });
-card_nameEL.innerHTML = `Il nome del passeggero è: ${user.value}`;
