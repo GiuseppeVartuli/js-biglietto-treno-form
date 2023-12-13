@@ -55,5 +55,13 @@ generateElement.addEventListener("click", function () {
 
   ticket_cardEl.innerHTML = discounted_price;
   console.log(discounted_price);
-  card_nameEL.innerHTML = `Il nome del passeggero è: ${user.value}`;
+  card_nameEL.innerHTML = `Il passeggero è: ${user.value}`;
+
+  document.getElementById("coach_card").innerHTML = Math.floor(
+    Math.random() * 10
+  );
+  document.getElementById("offer_card").innerHTML = `${age}`;
+  document.getElementById("cp_code").innerHTML = Math.floor(
+    Math.random() * 10000
+  );
 });
